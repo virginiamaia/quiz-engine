@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+main {
+    padding: 20px;
+}
+
+.progress-bar {
+    height: 5px;
+    background-color: #4caf50;
+    transition: width 0.3s ease;
+}
+
+.question-container {
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+    font-size: inherit;
+}
+
+input[type='radio'],
+input[type='checkbox'] {
+    margin-right: 10px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.zoom-controls {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    position: absolute;
+    top: 80px; /* Ajuste a posição vertical conforme necessário */
+    right: 20px; /* Ajuste a posição horizontal conforme necessário */
+    z-index: 1; /* Certifique-se de que os botões estão acima de outros elementos */
+}
+
+.zoom-controls button {
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #28a745; /* Cor verde para destacar o botão de reinício */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.restart-button:hover {
+    background-color: #218838;
+}

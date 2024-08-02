@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "type": "one-choice",
+      "title": "Qual é a capital da França?",
+      "options": ["Paris", "Londres", "Roma"],
+      "correctOption": 0
+    },
+    {
+      "id": 2,
+      "type": "multiple-choice",
+      "title": "Quais desses são linguagens de programação?",
+      "options": ["Python", "HTML", "CSS"],
+      "correctOptions": [0, 1]
+    },
+    {
+      "id": 3,
+      "type": "input",
+      "title": "Digite a raiz quadrada de 64.",
+      "correctAnswer": "8"
+    }
+  ]
+  
