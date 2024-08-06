@@ -19,10 +19,10 @@ Follow these steps to set up the project locally:
    ```bash
    git clone https://github.com/virginiamaia/quiz-engine.git
 2. **Navigate:**
-   cd quiz-engine
+   ```bash cd quiz-engine
 3. **Install the dependencies:**
-   npm install
-   
+   ```bash npm install
+
 ## Running the Application
-   npm start
+   ```bash npm start
 
