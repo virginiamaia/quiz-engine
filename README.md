@@ -1,22 +1,28 @@
-# Quiz Application
+# Quiz Engine
 
-## Description
+This project is a simple quiz application built with React. It allows users to answer multiple types of questions, such as multiple-choice and input-based questions.
 
-This is a React-based quiz application that allows users to answer multiple-choice and text-based questions. It includes features such as zoom control and quiz restart functionality.
+## Prerequisites
 
-## Requirements
+Before you begin, ensure you have met the following requirements:
 
-Before getting started, ensure you have the following tools installed:
+- **Node.js**: You need Node.js installed on your machine. You can download it from [nodejs.org](https://nodejs.org/).
 
-- [Node.js](https://nodejs.org/) (version 14 or higher)
-- [npm](https://www.npmjs.com/) (package manager for Node.js)
+## Installation
 
-## Setup
+Follow these steps to set up the project locally:
 
-1. **Clone the repository**
+1. **Clone the repository:**
 
-   First, clone the repository to your local environment:
+   Open your terminal or command prompt and run the following command:
 
    ```bash
-   git clone <https://github.com/virginiamaia/quiz-engine.git>
-   cd <REPOSITORY_NAME>
+   git clone https://github.com/virginiamaia/quiz-engine.git
+2. **Navigate:**
+   cd quiz-engine
+3. **Install the dependencies:**
+   npm install
+   
+## Running the Application
+   npm start
+
