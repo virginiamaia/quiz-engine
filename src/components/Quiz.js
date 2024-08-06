@@ -36,10 +36,10 @@ const Quiz = () => {
       if (selectedAnswerIndex !== undefined) {
         isCorrect = parseInt(selectedAnswerIndex, 10) === currentQuestion.correctOption;
         alert(isCorrect 
-          ? 'Resposta correta!' 
-          : `Resposta incorreta. A resposta correta é: ${currentQuestion.options[currentQuestion.correctOption]}`);
+          ? 'Correct answer!' 
+          : `Incorrect answer. The correct answer is: ${currentQuestion.options[currentQuestion.correctOption]}`);
       } else {
-        alert('Nenhuma opção selecionada.');
+        alert('No option selected.');
       }
     } 
     
@@ -50,16 +50,16 @@ const Quiz = () => {
 
       isCorrect = correctAnswers.size === userAnswers.size && [...correctAnswers].every(answer => userAnswers.has(answer));
       alert(isCorrect 
-        ? 'Resposta correta!' 
-        : `Resposta incorreta. As respostas corretas são: ${currentQuestion.correctOptions.map(index => currentQuestion.options[index]).join(', ')}`);
+        ? 'Correct answer!' 
+        : `Incorrect answer. The correct answers are: ${currentQuestion.correctOptions.map(index => currentQuestion.options[index]).join(', ')}`);
     }
     
     if (currentQuestion.type === 'input') {
       const userAnswer = answers[`question-${currentQuestion.id}`] || '';
       isCorrect = userAnswer.trim() === currentQuestion.correctAnswer.trim();
       alert(isCorrect 
-        ? 'Resposta correta!' 
-        : `Resposta incorreta. A resposta correta é: ${currentQuestion.correctAnswer}`);
+        ? 'Correct answer!' 
+        : `Incorrect answer. The correct answer is: ${currentQuestion.correctAnswer}`);
     }
     
     if (currentQuestionIndex < questionsData.length - 1) {
@@ -86,20 +86,24 @@ const Quiz = () => {
     <div>
       <div className="progress-bar" style={{ width: `${calculateProgress()}%` }}></div>
       <div className="zoom-controls">
-        <button onClick={() => setFontSize(fontSize + 2)}>Aumentar Zoom</button>
-        <button onClick={() => setFontSize(fontSize - 2)}>Diminuir Zoom</button>
+        <button onClick={() => setFontSize(fontSize + 2)}>Increase Zoom</button>
+        <button onClick={() => setFontSize(fontSize - 2)}>Decrease Zoom</button>
       </div>
       <div className="question-container" style={{ fontSize: `${fontSize}px` }}>
         {isComplete ? (
           <div>
-            <div>Quiz completo!</div>
-            <button className="restart-button" onClick={handleRestart}>Recomeçar</button>
+            <div>Quiz complete!</div>
+            <button className="restart-button" onClick={handleRestart}>Restart</button>
           </div>
         ) : (
           <div>
-            <Question question={currentQuestion} onAnswer={handleAnswer} />
+            <Question 
+              question={currentQuestion} 
+              onAnswer={handleAnswer} 
+              selectedAnswers={answers[`question-${currentQuestion.id}`] || {}} // Passar o estado para o componente Question
+            />
             <button onClick={handleNext}>
-              {currentQuestionIndex < questionsData.length - 1 ? 'Próxima' : 'Finalizar'}
+              {currentQuestionIndex < questionsData.length - 1 ? 'Next' : 'Finish'}
             </button>
           </div>
         )}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Question = ({ question, onAnswer }) => {
+const Question = ({ question, onAnswer, selectedAnswers }) => {
   const renderOptions = () => {
     return question.options.map((option, index) => (
       <div key={index}>
@@ -8,6 +8,7 @@ const Question = ({ question, onAnswer }) => {
           type={question.type === 'one-choice' ? 'radio' : 'checkbox'}
           name={`question-${question.id}`}
           value={index}
+          checked={question.type === 'one-choice' ? (selectedAnswers === index.toString()) : (selectedAnswers[index] === true)}
           onChange={onAnswer}
         />
         <label>{option}</label>
